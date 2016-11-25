@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardview_fragmentdetalhe0"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_margin="6dp"
+                android:clickable="false"
+                card_view:cardBackgroundColor="@color/cardview_light_background"
+                card_view:cardElevation="6dp"
+                card_view:cardCornerRadius="2dp">>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:layout_marginLeft="3dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Small Text"
+                        android:id="@+id/textView_card__adapter_serie" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ProgressBar
+                            style="?android:attr/progressBarStyleSmall"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/progressBar"
+                            android:layout_gravity="center" />
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/imageView_card_adapter_serie"
+                            android:layout_gravity="center"
+                            android:src="@drawable/television" />
+
+                    </FrameLayout>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardview_fragmentdetalhe1"
+                android:layout_gravity="center_horizontal|top"
+                android:layout_margin="6dp"
+                android:clickable="false"
+                card_view:cardBackgroundColor="@color/cardview_light_background"
+                card_view:cardElevation="6dp"
+                card_view:cardCornerRadius="2dp" >
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:gravity="center">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tipo_abc"
+                        android:id="@+id/rbABC_card1_fragmentDetalheSerie" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tipo_cw"
+                        android:id="@+id/rbCW_card1_fragmentDetalheSerie" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tipo_hbo"
+                        android:id="@+id/rbHBO_card1_fragmentDetalheSerie" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tipo_netflix"
+                        android:id="@+id/rbNetflix_card1_fragmentDetalheSerie" />
+
+                </RadioGroup>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardview_fragmentdetalhe2"
+                android:layout_gravity="center_horizontal|top" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/data_textview"
+                    android:id="@+id/textView2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvDescricao_card2_fragmentdetalhe"/>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/cardview_fragmentdetalhe4"
+                android:layout_gravity="center_horizontal|top" >
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <VideoView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/videoView_card4_frdetalheserie"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:layout_width="91dp"
+                        android:layout_height="91dp"
+                        android:id="@+id/imageView_card4_fradetalheserie"
+                        android:src="@android:drawable/ic_media_play"
+                        android:layout_gravity="center" />
+
+                </FrameLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</FrameLayout>

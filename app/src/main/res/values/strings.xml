@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">DiarioDoSeriador2</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    
+    <string name="tipo_todos">Todos</string>
+    <string name="tipo_netflix">Netflix</string>
+    <string name="tipo_hbo">HBO</string>
+    <string name="tipo_abc">ABC</string>
+    <string name="tipo_cw">CW</string>
+
+    <string name="tipo_textview">Tipo:</string>
+    <string name="nome_textview">Nome:</string>
+    <string name="dataini_textview">Data início:</string>
+    <string name="datafim_textview">Data fim:</string>
+    <string name="temporadas_textview">Número de temporadas:</string>
+    <string name="Foto_textview">Foto:</string>
+    <string name="Info_textview">Vídeo:</string>
+    <string name="urlfoto_textview">URL Foto:</string>
+    <string name="urlvideo_textview">URL Vídeo:</string>
+    <string name="urlvideo_hint">Clique para obter a URL</string>
+</resources>
