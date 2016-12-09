@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">DiarioDoSeriador2</string>
 
+    <string name="titulo_fragmentseries">Lista de séries</string>
+
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
@@ -22,4 +24,15 @@
     <string name="urlfoto_textview">URL Foto:</string>
     <string name="urlvideo_textview">URL Vídeo:</string>
     <string name="urlvideo_hint">Clique para obter a URL</string>
+
+    <string name="action_salvar">Salvar</string>
+    <string name="action_excluir">Excluir</string>
+    <string name="action_editar">Editar</string>
+    <string name="action_pesquisar">Pesquisar</string>
+    <string name="data_textview">Data:</string>
+
+    <string name="nav_configuracoes">Configurações</string>
+    <string name="nav_listseries">Lista de séries</string>
+    <string name="nav_sobre">Sobre</string>
+    <string name="hint_pesquisar">Nome da série</string>
 </resources>
