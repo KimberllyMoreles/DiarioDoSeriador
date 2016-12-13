@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.aluno.diariodoseriador2.R;
-import com.example.aluno.diariodoseriador2.activity.SeriesActivity;
+import com.example.aluno.diariodoseriador2.activity.SerieActivity;
 
 /**
  * Created by aluno on 12/12/16.
@@ -20,13 +20,15 @@ public class SerieNovoFragment extends BaseFragment {
 
         setHasOptionsMenu(true);
 
-        ((SeriesActivity)getActivity()).getSupportActionBar().setTitle(R.string.title_fragment_novaserie);
+        ((SerieActivity)getActivity()).getSupportActionBar().setTitle(R.string.title_fragment_novaserie);
+
     }
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_nova_serie, container, false);
+
         return view;
     }
 }
