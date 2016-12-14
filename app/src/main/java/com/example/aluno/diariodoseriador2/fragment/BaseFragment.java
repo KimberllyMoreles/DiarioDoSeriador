@@ -7,4 +7,8 @@ import android.support.v4.app.Fragment;
  */
 public class BaseFragment extends Fragment{
     protected static String TAG = "bdseries";
+
+    protected void replaceFragment(int container, Fragment fragment){
+        getActivity().getSupportFragmentManager().beginTransaction().replace(container, fragment).commit();
+    }
 }

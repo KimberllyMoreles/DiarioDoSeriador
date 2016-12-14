@@ -2,7 +2,7 @@
     <string name="app_name">DiarioDoSeriador2</string>
 
     <string name="titulo_fragmentseries">Lista de séries</string>
-    <string name="title_fragment_detalheserie">Detalhes da Série</string><string name="title_fragment_edicaocarro">Edição do Carro</string>
+    <string name="title_fragment_detalheserie">Detalhes da Série</string><string name="title_fragment_edicaoserie">Edição da Série</string>
     <string name="title_fragment_novaserie">Nova Série</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
