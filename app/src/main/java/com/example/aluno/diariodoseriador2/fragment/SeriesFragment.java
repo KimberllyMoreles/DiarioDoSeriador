@@ -14,6 +14,10 @@ import android.view.ViewGroup;
 
 import com.example.aluno.diariodoseriador2.R;
 import com.example.aluno.diariodoseriador2.activity.SeriesActivity;
+import com.example.aluno.diariodoseriador2.model.Serie;
+import com.example.aluno.diariodoseriador2.service.SerieServiceBD;
+
+import java.util.List;
 
 /**
  * Created by aluno on 09/12/16.
@@ -22,6 +26,8 @@ public class SeriesFragment extends BaseFragment implements SearchView.OnQueryTe
 
     private RecyclerView recyclerview;
     private LinearLayoutManager linearLayoutManager;
+    private List<Serie> series;
+    private SerieServiceBD serieServiceBD;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -30,6 +36,8 @@ public class SeriesFragment extends BaseFragment implements SearchView.OnQueryTe
         setHasOptionsMenu(true);
 
         ((SeriesActivity)getActivity()).getSupportActionBar().setTitle(R.string.titulo_fragmentseries);
+
+        serieServiceBD = SerieServiceBD.getInstance(getContext());
     }
 
     @Nullable

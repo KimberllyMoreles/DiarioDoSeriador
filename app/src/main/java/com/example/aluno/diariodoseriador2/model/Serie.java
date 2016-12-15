@@ -15,6 +15,7 @@ public class Serie implements Serializable {
     public String temporadas;
     public Integer urlFoto;
     public String urlVideo;
+    public String emissora;
 
     @Override
     public String toString() {
@@ -24,6 +25,7 @@ public class Serie implements Serializable {
                 ", ano_inicio='" + ano_inicio + '\'' +
                 ", ano_fim='" + ano_fim + '\'' +
                 ", temporadas='" + temporadas + '\'' +
+                ", emissora='" + emissora + '\'' +
                 '}';
     }
 }

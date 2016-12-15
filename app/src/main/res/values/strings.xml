@@ -43,4 +43,13 @@
     <string name="nav_listseries">Lista de séries</string>
     <string name="nav_sobre">Sobre</string>
     <string name="hint_pesquisar">Nome da série</string>
+
+    <string name="val_dadosinputs">Você deve inserir o nome, a data de início e o número de temporadas da série.</string>
+
+    <string name="alert_title_wait">Aguarde</string>
+    <string name="alert_message_processando">Processando ...</string>
+    <string name="alertdialog_buttom_ok">OK</string>
+    <string name="alert_title_resultadodaoperacao">Resultado da Operação</string>
+    <string name="alert_message_realizadacomsucesso">Realizada com sucesso.</string>
+    <string name="alert_message_erroaorealizaroperacao">Erro ao realizar a operação. Por favor, avise o desenvolvedor.</string>
 </resources>
