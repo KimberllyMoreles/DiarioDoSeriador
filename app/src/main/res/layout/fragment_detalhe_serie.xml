@@ -54,9 +54,8 @@
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:id="@+id/imageView_card_adapter_serie"
-                            android:layout_gravity="center"
-                            android:src="@drawable/television" />
+                            android:id="@+id/imageView_card_detalhe_serie"
+                            android:layout_gravity="center" />
 
                     </FrameLayout>
                 </LinearLayout>

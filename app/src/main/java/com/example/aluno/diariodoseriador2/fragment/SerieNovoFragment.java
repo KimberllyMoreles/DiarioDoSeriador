@@ -57,6 +57,9 @@ public class SerieNovoFragment extends BaseFragment {
         //mapeia e inicializa os componentes da UI
         //Card0
         ivFoto = (ImageView) view.findViewById(R.id.imv_card0_frnovaserie);
+        if (serie.urlFoto != null){
+            ivFoto.setImageURI(Uri.parse(serie.urlFoto));
+        }
         ivFoto.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -157,7 +160,7 @@ public class SerieNovoFragment extends BaseFragment {
             Log.d(TAG, "URI do arquivo: " + arquivoUri);
             if(arquivoUri.toString().contains("images")) {
                 ivFoto.setImageURI(arquivoUri); //coloca a imagem no ImageView
-                serie.urlFoto = Integer.valueOf(arquivoUri.toString()); //armazena o Uri para salvar a imagem no objeto imagem
+                serie.urlFoto = arquivoUri.toString(); //armazena o Uri para salvar a imagem no objeto imagem
             }else if(arquivoUri.toString().contains("video")) {
                 etUrlVideo.setText(arquivoUri.toString()); //coloca a URL do vídeo no EditText
                 serie.urlVideo = arquivoUri.toString(); //armazena o URL do vídeo no objeto do modelo
@@ -187,7 +190,7 @@ public class SerieNovoFragment extends BaseFragment {
         @Override
         protected void onPostExecute(Long cont) {
             super.onPostExecute(cont);
-            alertWaitDismiss();
+            //alertWaitDismiss();
             if(cont > 0){
                 //faz aparecer uma caixa de diálogo confirmando a operação
                 alertOk(R.string.alert_title_resultadodaoperacao, R.string.alert_message_realizadacomsucesso);

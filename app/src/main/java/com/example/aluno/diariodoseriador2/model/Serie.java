@@ -13,7 +13,7 @@ public class Serie implements Serializable {
     public String ano_inicio;
     public String ano_fim;
     public String temporadas;
-    public Integer urlFoto;
+    public String urlFoto;
     public String urlVideo;
     public String emissora;
 

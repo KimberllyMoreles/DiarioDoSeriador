@@ -1,10 +1,12 @@
 package com.example.aluno.diariodoseriador2.activity;
 
 import android.os.Bundle;
+import android.util.Log;
 
 import com.example.aluno.diariodoseriador2.R;
 import com.example.aluno.diariodoseriador2.fragment.SerieDetalheFragment;
 import com.example.aluno.diariodoseriador2.fragment.SerieNovoFragment;
+import com.example.aluno.diariodoseriador2.model.Serie;
 
 /**
  * Created by aluno on 09/12/16.
@@ -25,7 +27,14 @@ public class SerieActivity extends BaseActivity {
 
         else {
             if (msg.equals("SerieDetalheFragment")){
-                replaceFragment(R.id.fragment_container, new SerieDetalheFragment());
+
+                SerieDetalheFragment serieDetalheFragment = new SerieDetalheFragment();
+                replaceFragment(R.id.fragment_container, serieDetalheFragment);
+
+                Serie serie = (Serie) getIntent().getSerializableExtra("serie");
+                Log.d(TAG, "Objeto série recebido: " + serie.toString());
+
+                serieDetalheFragment.setSerie(serie);
             }
         }
     }

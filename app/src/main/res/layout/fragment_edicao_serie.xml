@@ -27,7 +27,7 @@
                 <ImageView
                     android:layout_width="250dp"
                     android:layout_height="150dp"
-                    android:id="@+id/imv_card0_frnovaserie"
+                    android:id="@+id/imv_card0_fredicaoserie"
                     android:text="URL da foto"
                     android:layout_gravity="center"
                     android:src="@drawable/television" />
@@ -55,25 +55,25 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/tipo_abc"
-                        android:id="@+id/rb_abc_card1_frnovaserie" />
+                        android:id="@+id/rb_abc_card1_fredicaoserie" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/tipo_cw"
-                        android:id="@+id/rb_cw_card1_frnovaserie" />
+                        android:id="@+id/rb_cw_card1_fredicaoserie" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/tipo_hbo"
-                        android:id="@+id/rb_hbo_card1_frnovaserie" />
+                        android:id="@+id/rb_hbo_card1_fredicaoserie" />
 
                     <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/tipo_netflix"
-                        android:id="@+id/rb_netflix_card1_frnovaserie" />
+                        android:id="@+id/rb_netflix_card1_fredicaoserie" />
                 </RadioGroup>
 
 
@@ -107,7 +107,7 @@
                         android:layout_height="wrap_content"
                         android:inputType="textPersonName"
                         android:ems="10"
-                        android:id="@+id/etNome_card2_frnovaserie" />
+                        android:id="@+id/etNome_card2_fredicaoserie" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -120,7 +120,7 @@
                         android:layout_height="wrap_content"
                         android:inputType="date"
                         android:ems="10"
-                        android:id="@+id/etDataIni_card2_frnovaserie" />
+                        android:id="@+id/etDataIni_card2_fredicaoserie" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -133,7 +133,7 @@
                         android:layout_height="wrap_content"
                         android:inputType="date"
                         android:ems="10"
-                        android:id="@+id/etDataFim_card2_frnovaserie" />
+                        android:id="@+id/etDataFim_card2_fredicaoserie" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -146,7 +146,7 @@
                         android:layout_height="wrap_content"
                         android:inputType="numberDecimal"
                         android:ems="10"
-                        android:id="@+id/etTemporadas_card2_frnovaserie" />
+                        android:id="@+id/etTemporadas_card2_fredicaoserie" />
 
                 </LinearLayout>
 
@@ -177,7 +177,7 @@
                     <EditText
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:id="@+id/etURLVideo__card4_frnovaserie"
+                        android:id="@+id/etURLVideo__card4_fredicaoserie"
                         android:focusable="false"
                         android:hint="@string/urlvideo_hint" />
                 </LinearLayout>

@@ -71,11 +71,11 @@ public class SerieServiceBD extends SQLiteOpenHelper {
 
     }
 
-    public List<Serie> getByTipo(String tipo){
+    public List<Serie> getByTipo(String emissora){
         //abre a conexão com o bd
         SQLiteDatabase sqLiteDatabase = getReadableDatabase();
         try{
-            return toList(sqLiteDatabase.rawQuery("select * from serie where tipo = '" + tipo + "'", null));
+            return toList(sqLiteDatabase.rawQuery("select * from serie where emissora = '" + emissora + "'", null));
         }finally {
             sqLiteDatabase.close(); //libera o recurso
         }
@@ -141,7 +141,7 @@ public class SerieServiceBD extends SQLiteOpenHelper {
                 serie.nome = c.getString(c.getColumnIndex("nome"));
                 serie.ano_inicio = c.getString(c.getColumnIndex("ano_inicio"));
                 serie.ano_fim = c.getString(c.getColumnIndex("ano_fim"));
-                serie.urlFoto = Integer.valueOf(c.getString(c.getColumnIndex("url_foto")));
+                serie.urlFoto = c.getString(c.getColumnIndex("url_foto"));
                 serie.urlVideo = c.getString(c.getColumnIndex("url_video"));
                 serie.temporadas = c.getString(c.getColumnIndex("temporadas"));
                 serie.emissora = c.getString(c.getColumnIndex("emissora"));
