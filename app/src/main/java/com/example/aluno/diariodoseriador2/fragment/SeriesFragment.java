@@ -6,6 +6,7 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.content.ContextCompat;
+import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -33,6 +34,7 @@ public class SeriesFragment extends BaseFragment implements SearchView.OnQueryTe
 
     protected RecyclerView recyclerview;
     private LinearLayoutManager linearLayoutManager;
+    private SwipeRefreshLayout swipeRefreshLayout;
     private List<Serie> series;
     private SerieServiceBD serieServiceBD;
     private String tipo;
@@ -80,7 +82,20 @@ public class SeriesFragment extends BaseFragment implements SearchView.OnQueryTe
         recyclerview.setItemAnimator(new DefaultItemAnimator());
         recyclerview.setHasFixedSize(true);
 
+        swipeRefreshLayout = (SwipeRefreshLayout) view.findViewById(R.id.swiperefreshlayout);
+        swipeRefreshLayout.setOnRefreshListener(OnRefreshListener());
+        swipeRefreshLayout.setColorSchemeResources(R.color.refresh_progress_1, R.color.refresh_progress_2, R.color.refresh_progress_3);
+
         return view;
+    }
+
+    private SwipeRefreshLayout.OnRefreshListener OnRefreshListener() {
+        return new SwipeRefreshLayout.OnRefreshListener() {
+            @Override
+            public void onRefresh() {
+                new Task().execute();
+            }
+        };
     }
 
     @Override
@@ -165,6 +180,7 @@ public class SeriesFragment extends BaseFragment implements SearchView.OnQueryTe
             SeriesFragment.this.series = series;
             //atualiza a view na UIThread
             recyclerview.setAdapter(new SeriesAdapter(getContext(), series, onClickSerie())); //Context, fonte de dados, tratador do evento onClick
+            swipeRefreshLayout.setRefreshing(false);
         }
     }//fim classe interna
 

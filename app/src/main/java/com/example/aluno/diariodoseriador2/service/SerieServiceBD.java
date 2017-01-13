@@ -103,7 +103,7 @@ public class SerieServiceBD extends SQLiteOpenHelper {
                 return db.insert("serie", null, values);
             }else{
                 //altera no banco de dados
-                values.put("__id", serie._id);
+                values.put("_id", serie._id);
                 return db.update("serie", values, "_id=" + serie._id, null);
             }
         }catch (SQLException e){

@@ -98,6 +98,7 @@ public class SeriesActivity extends BaseActivity
         return true;
     }
 
+
     @Override
     public void onTabSelected(TabLayout.Tab tab) {
         viewPager.setCurrentItem(tab.getPosition());

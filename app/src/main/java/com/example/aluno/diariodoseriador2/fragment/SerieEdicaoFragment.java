@@ -43,7 +43,6 @@ public class SerieEdicaoFragment extends BaseFragment {
 
         setHasOptionsMenu(true);
 
-        ((SerieActivity)getActivity()).getSupportActionBar().setTitle(R.string.title_fragment_edicaoserie);
 
         serieServiceBD = SerieServiceBD.getInstance(getContext());
     }
@@ -56,8 +55,7 @@ public class SerieEdicaoFragment extends BaseFragment {
         //um título para a janela
         ((SerieActivity) getActivity()).getSupportActionBar().setTitle(R.string.title_fragment_edicaoserie);
 
-        //Cria uma instancia da classe de modelo
-        serie = new Serie();
+
 
         //mapeia e inicializa os componentes da UI
         //Card0
@@ -84,13 +82,26 @@ public class SerieEdicaoFragment extends BaseFragment {
         rbHbo = (RadioButton) view.findViewById(R.id.rb_hbo_card1_fredicaoserie);
         rbNetflix = (RadioButton) view.findViewById(R.id.rb_netflix_card1_fredicaoserie);
 
-        if (serie.emissora.equals(getContext().getResources().getString(R.string.tipo_abc)))
+        if (serie.emissora.equals(getContext().getResources().getString(R.string.tipo_abc))){
+            rbAbc.setChecked(true);
+        } else if (serie.emissora.equals(getContext().getResources().getString(R.string.tipo_cw))){
+            rbCw.setChecked(true);
+        } else if (serie.emissora.equals(getContext().getResources().getString(R.string.tipo_hbo))){
+            rbHbo.setChecked(true);
+        } else {
+            rbNetflix.setChecked(true);
+        }
 
         //Card2
         etNome = (EditText) view.findViewById(R.id.etNome_card2_fredicaoserie);
         etDataIni = (EditText) view.findViewById(R.id.etDataIni_card2_fredicaoserie);
         etDataFim = (EditText) view.findViewById(R.id.etDataFim_card2_fredicaoserie);
         etTemporadas = (EditText) view.findViewById(R.id.etTemporadas_card2_fredicaoserie);
+
+        etNome.setText(serie.nome);
+        etDataIni.setText(serie.ano_inicio);
+        etDataFim.setText(serie.ano_fim);
+        etTemporadas.setText(serie.temporadas);
 
         //Card4
         etUrlVideo = (EditText) view.findViewById(R.id.etURLVideo__card4_fredicaoserie);
@@ -146,6 +157,11 @@ public class SerieEdicaoFragment extends BaseFragment {
                             Toast.LENGTH_SHORT).show();
                 }
                 break;
+
+            case R.id.menuitem_excluir:{
+                new SeriesTask().execute(DELETE);
+                break;
+            }
 
             case android.R.id.home:
                 getActivity().finish();

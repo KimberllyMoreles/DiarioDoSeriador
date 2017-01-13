@@ -37,7 +37,6 @@
     <string name="action_excluir">Excluir</string>
     <string name="action_editar">Editar</string>
     <string name="action_pesquisar">Pesquisar</string>
-    <string name="data_textview">Data:</string>
 
     <string name="nav_configuracoes">Configurações</string>
     <string name="nav_listseries">Lista de séries</string>
@@ -45,6 +44,10 @@
     <string name="hint_pesquisar">Nome da série</string>
 
     <string name="val_dadosinputs">Você deve inserir o nome, a data de início e o número de temporadas da série.</string>
+
+    <string name="direitos_autorais">IFSul Bagé - todos os direitos reservados.</string>
+    <string name="toast_message_noVideo">Não há video.</string>
+
 
     <string name="alert_title_wait">Aguarde</string>
     <string name="alert_message_processando">Processando ...</string>

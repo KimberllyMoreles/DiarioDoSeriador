@@ -17,7 +17,7 @@ public class SerieActivity extends BaseActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.activity_series);
+        setContentView(R.layout.activity_serie);
 
         String msg = (String) getIntent().getCharSequenceExtra("qualFragmentAbrir");
 
