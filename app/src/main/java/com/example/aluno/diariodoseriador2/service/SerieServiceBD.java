@@ -41,10 +41,10 @@ public class SerieServiceBD extends SQLiteOpenHelper {
         String sql = "create table if not exists serie" +
                 "( _id integer primary key autoincrement, " +
                 " nome text not null, " +
-                "url_foto text, " +
-                "url_video text, " +
+                "url_foto text not null, " +
+                "url_video text not null, " +
                 " ano_inicio text not null, " +
-                " ano_fim text, " +
+                " ano_fim text not null, " +
                 " emissora text not null, " +
                 " temporadas text not null);";
         Log.d(TAG, "Criando a tabela serie. Aguarde ...");

@@ -105,6 +105,9 @@ public class SerieEdicaoFragment extends BaseFragment {
 
         //Card4
         etUrlVideo = (EditText) view.findViewById(R.id.etURLVideo__card4_fredicaoserie);
+        if(serie.urlVideo != null){
+            etUrlVideo.setText(serie.urlVideo);
+        }
         etUrlVideo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -131,9 +134,12 @@ public class SerieEdicaoFragment extends BaseFragment {
         switch (item.getItemId()){
             case R.id.menuitem_salvar:
                 //Toast.makeText(getContext(), "salvo", Toast.LENGTH_SHORT).show();
-                if(!etNome.getText().toString().isEmpty()||
-                        !etDataIni.getText().toString().isEmpty()||
-                        !etTemporadas.getText().toString().isEmpty()){
+                if(serie.urlFoto != null &&
+                        !etNome.getText().toString().isEmpty() &&
+                        !etDataIni.getText().toString().isEmpty() &&
+                        !etDataFim.getText().toString().isEmpty() &&
+                        !etTemporadas.getText().toString().isEmpty() &&
+                        serie.urlVideo != null){
 
                     serie.nome = etNome.getText().toString();
                     serie.ano_inicio = etDataIni.getText().toString();

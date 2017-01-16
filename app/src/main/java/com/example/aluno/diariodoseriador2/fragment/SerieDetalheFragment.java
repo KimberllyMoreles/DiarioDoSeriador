@@ -34,6 +34,7 @@ public class SerieDetalheFragment extends BaseFragment{
     private TextView tvNome, tvDataIni, tvDataFim, tvTemporadas;
     private ImageView ivFoto;
     private VideoView vvVideo;
+    private ProgressBar progressBar;
 
 
     public void setSerie(Serie serie) {
@@ -58,6 +59,8 @@ public class SerieDetalheFragment extends BaseFragment{
         //mapeia e inicializa os componentes da UI
         //Card0
         ivFoto = (ImageView) view.findViewById(R.id.imageView_card_detalhe_serie);
+        progressBar = (ProgressBar)view.findViewById(R.id.progressBar);
+        progressBar.setVisibility(View.INVISIBLE);
         if (serie.urlFoto != null){
             ivFoto.setImageURI(Uri.parse(serie.urlFoto));
         }

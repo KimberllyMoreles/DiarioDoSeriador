@@ -43,7 +43,7 @@
     <string name="nav_sobre">Sobre</string>
     <string name="hint_pesquisar">Nome da série</string>
 
-    <string name="val_dadosinputs">Você deve inserir o nome, a data de início e o número de temporadas da série.</string>
+    <string name="val_dadosinputs">Você deve preencher todos os campos.</string>
 
     <string name="direitos_autorais">IFSul Bagé - todos os direitos reservados.</string>
     <string name="toast_message_noVideo">Não há video.</string>

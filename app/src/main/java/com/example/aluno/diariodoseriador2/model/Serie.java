@@ -25,6 +25,8 @@ public class Serie implements Serializable {
                 ", ano_inicio='" + ano_inicio + '\'' +
                 ", ano_fim='" + ano_fim + '\'' +
                 ", temporadas='" + temporadas + '\'' +
+                ", urlFoto='" + urlFoto + '\'' +
+                ", urlVideo='" + urlVideo + '\'' +
                 ", emissora='" + emissora + '\'' +
                 '}';
     }

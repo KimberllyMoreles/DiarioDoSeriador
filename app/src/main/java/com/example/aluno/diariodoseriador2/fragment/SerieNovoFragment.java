@@ -114,9 +114,12 @@ public class SerieNovoFragment extends BaseFragment {
         switch (item.getItemId()){
             case R.id.menuitem_salvar:
                 //Toast.makeText(getContext(), "salvo", Toast.LENGTH_SHORT).show();
-                if(!etNome.getText().toString().isEmpty()||
-                        !etDataIni.getText().toString().isEmpty()||
-                        !etTemporadas.getText().toString().isEmpty()){
+                if(serie.urlFoto != null &&
+                        !etNome.getText().toString().isEmpty() &&
+                        !etDataIni.getText().toString().isEmpty() &&
+                        !etDataFim.getText().toString().isEmpty() &&
+                        !etTemporadas.getText().toString().isEmpty() &&
+                        serie.urlVideo != null){
 
                     serie.nome = etNome.getText().toString();
                     serie.ano_inicio = etDataIni.getText().toString();
